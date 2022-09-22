@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,400;1,200&display=swap" rel="stylesheet">
+    <title>memory game</title>
+</head>
+<body>
+    <h1 id="title">memory game</h1>
+    <h5>tries: <span class="span">0</span></h5>
+    <h5>matches found: <span class="found">0</span></h5>
+    <h2 class="gameover"></h2>
+    <h2 class="youwin"></h2>
+    <table>
+        <tr>
+            <td class="a"  onclick="show_picture('1')""><img src="pinkbutterfly.jpg" id="item1" alt=""></td>
+            <td class="a"  onclick="show_picture('2')"><img src="pinkbutterfly.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('3')"><img src="pinkcar.webp" alt=""></td>
+            <td class="a"  onclick="show_picture('4')"><img src="pinkcar.webp" alt=""></td>
+            <td class="a"  onclick="show_picture('5')"><img src="pinkteddy.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('6')"><img src="pinkcat.webp" alt=""></td>
+        </tr>
+        <tr>
+            <td class="a"  onclick="show_picture('7')"><img src="pinkcat.webp" alt=""></td>
+            <td class="a"  onclick="show_picture('8')"><img src="pinkdog.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('9')"><img src="pinkdog.jpg" alt=""></td> 
+            <td class="a"  onclick="show_picture('10')"><img src="pinkdonut.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('11')"><img src="pinkdonut.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('12')"><img src="pinkelephant.jpg" alt=""></td>
+        </tr>
+        <tr>
+            <td class="a"  onclick="show_picture('13')"><img src="pinkelephant.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('14')"><img src="pinkflower.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('15')"><img src="pinkflower.jpg" alt=""></td> 
+            <td class="a"  onclick="show_picture('16')"><img src="pinkheart.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('17')"><img src="pinkheart.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('18')"><img src="pinkmusic.jpg" alt=""></td>
+        </tr>
+        <tr>
+            <td class="a"  onclick="show_picture('19')"><img src="pinkmusic.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('20')"><img src="pinkrabbit.jpg" alt=""></td>
+            <td class="a"  onclick="show_picture('21')"><img src="pinkrabbit.jpg" alt=""></td> 
+            <td class="a"  onclick="show_picture('22')"><img src="pinkstar.webp" alt=""></td>
+            <td class="a"  onclick="show_picture('23')"><img src="pinkstar.webp" alt=""></td>
+            <td class="a"  onclick="show_picture('24')"><img src="pinkteddy.jpg" alt=""></td>
+        </tr>
+    </table>
+    <script src="script.js" async></script>
+</body>
+</html>
