@@ -33,14 +33,14 @@ let imagenames = [
 "pinkteddy.jpg"
 ]
 
-for(let i = imagenames.length; i > 0; i --){
+for(let i = imagenames.length - 1; i > 0; i --){
     console.log(Math.floor(Math.random()*10));
     let randomnumber = Math.floor(Math.random()*(i + 1));
     let current = imagenames[i]
     imagenames[i] = imagenames[randomnumber]
     imagenames[randomnumber] = current
 }
-// console.log(imagenames);
+console.log(imagenames);
 for(let i = 0; i < 24; i ++){
     console.log(pic[i]);
     pic[i].src = imagenames[i]
@@ -48,6 +48,9 @@ for(let i = 0; i < 24; i ++){
 
 }
 
+for(let i = 30; i < 46; i++){
+    console.log(i);
+}
 
 triescount.innerText = 3;
 
@@ -61,7 +64,6 @@ function rotate_cards() {
     }
    
 }
-
 
 
 function show_picture(picposition) {
@@ -87,26 +89,38 @@ function show_picture(picposition) {
                         youwin.innerText = "YOU WIN!!!";
                         youwin.style.opacity = 1;
                     }
+                    buffer.splice(0,2);
 
                 }
                 else {
                     let count = Number(triescount.innerText);
-                    count = count - 1;
+                    count = count + 1;
                     triescount.innerText = count; 
+                    setTimeout(function(){
+                        buffer[0].parentElement.style.transform = "rotate3d(0,1,0,180deg)";
+                        buffer[0].parentElement.style.backfaceVisibility = "visible";
+                        buffer[0].parentElement.style.backgroundColor = "lightpink";
+                        buffer[0].style.opacity = 0;
+                        buffer[1].parentElement.style.transform = "rotate3d(0,1,0,180deg)";
+                        buffer[1].parentElement.style.backfaceVisibility = "visible";
+                        buffer[1].parentElement.style.backgroundColor = "lightpink";
+                        buffer[1].style.opacity = 0;
+                        buffer.splice(0,2);
+                    },1000)
 
-                    if (count == 0) {
-                        table.remove();
-                        gameOver.innerText = "GAME OVER!";
-                        gameOver.style.opacity = 1; 
+                    // if (count == 0) {
+                    //     table.remove();
+                    //     gameOver.innerText = "GAME OVER!";
+                    //     gameOver.style.opacity = 1; 
 
-                    }
+                    // }
 
 
                 }
-                buffer.splice(0,2);
+                
             }
         }
     }
 }
 
-// setTimeout(rotate_cards, 1000);
+setTimeout(rotate_cards, 1000);
