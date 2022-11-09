@@ -22,7 +22,12 @@ td {
     height: 100px;
     font-size: 0;
     transition: .2s;
+    
+    
+}
 
+.opened {
+    pointer-events: none;
 }
 
 td img{
@@ -59,4 +64,18 @@ body{
     margin-top: 100px;
     transition: opacity .3s;
     opacity: 0;
+}
+
+#cat{
+    height: 20px;
+    margin-top: 100px;
+}
+
+button{
+    color: hotpink;
+    background-color: lightpink;
+    border-radius: 4px;
+    border: none;
+    padding: 6px;
+    margin-top: 30px;
 }
